@@ -2,6 +2,7 @@ require("dotenv/config");
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 const bodyParser = require('body-parser');
 
 // routes
@@ -9,6 +10,7 @@ const openings = require("./routes/opening");
 
 // app use
 const app = express();
+// app.use(express.static(path.join(__dirname + '/public')))
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
