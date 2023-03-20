@@ -10,7 +10,7 @@ const openings = require("./routes/opening");
 
 // app use
 const app = express();
-// app.use(express.static(path.join(__dirname + '/public')))
+app.use(express.static(path.join(__dirname + '/public')))
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
